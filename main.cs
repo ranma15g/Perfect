@@ -13,7 +13,7 @@ class Program
     
     
     // We initialize the unit test the professor is asking to us to test against the list of perfect numbers    
-    int unitTest = 496;
+    int unitTest = 68;
 
     
     
