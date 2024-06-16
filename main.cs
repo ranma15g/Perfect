@@ -13,13 +13,13 @@ class Program
     
     
     // We initialize the unit test the professor is asking to us to test against the list of perfect numbers    
-    int unit_test = 496;
+    int unitTest = 496;
 
     
     
-    /* We initialize a boolean to let the program know if the unit_test var compares equal against 
+    /* We initialize a boolean to let the program know if the unitTest var compares equal against 
        any of the perfect numbers we create */
-    bool unit_test_test = false;
+    bool unitTestTest = false;
 
     
     
@@ -29,27 +29,27 @@ class Program
     
     
     // We are running a for loop start at 1 and ending at 10,000 that increments each iteration
-    for (int number = 1; number <= 10000; number++)
+    for (int tNumber = 1; tNumber <= 10000; tNumber++)
       {
 
         /* We initialize an int named sum that will be used to accumulate numbers that divide into the 
-           iterative for loop value number */
+           iterative for loop value t_number */
         int sum = 0;
 
     
         
         /* Here we are running another for loop in a sub stack that will test each incremental iteration
            to see if when it is divided by any number less than itself it will come out equal to zero */
-        for (int divisor = 1; divisor < number; divisor++) 
+        for (int divisor = 1; divisor < tNumber; divisor++) 
         {
 
         
           
-          // if the number ver has no remainder when divided by the for loop control variable with modulus
-          if (number % divisor == 0) 
-          { // then we accumulate the value of the divisor to the sum variable at its present state 
-            sum += divisor;
-          }
+            // if the t_number var has no remainder when divided by the for loop control variable with modulus
+            if (tNumber % divisor == 0) 
+            { // then we accumulate the value of the divisor to the sum variable at its present state 
+              sum += divisor;
+            }
 
 
           
@@ -62,9 +62,9 @@ class Program
         
         /* if the accumuation of all the numbers modulated by the divisor incrementor is equal to the
            number iterative in this stack */
-        if (sum == number)
-        { // add the current incrementation of number to the list of perfect numbers
-          perfectNumbers.Add(number);          
+        if (sum == tNumber)
+          { // add the current incrementation of t_number to the list of perfect numbers
+            perfectNumbers.Add(tNumber);          
         }
 
 
@@ -82,13 +82,13 @@ class Program
 
 
       
-      /* After we write out each int in list we compare it to the unit_test variable
-         to see if the unit_test variable matches any of the ints in the perfectNumbers list */
+      /* After we write out each int in list we compare it to the unitTest variable
+         to see if the unitTest variable matches any of the ints in the perfectNumbers list */
       
-      // If the unit_test var matches the current iteration of the foreach perfectNumbers list value
-      if (unit_test == pn)
-        // We will tell the unit_test_test boolean that it is true instead of false
-        { unit_test_test = true; }
+      // If the unitTest var matches the current iteration of the foreach perfectNumbers list value
+      if (unitTest == pn)
+          // We will tell the unitTest_test boolean that it is true instead of false
+          { unitTestTest = true; }
       
     }
 
@@ -96,20 +96,20 @@ class Program
 
 
     // We are now going to print out a line to inform the audience about the unit test comparison
-    Console.WriteLine("\nAnd it will test this unit test " + unit_test + " to see if it is a perfect number");
+    Console.WriteLine("\nAnd it will test this unit test " + unitTest + " to see if it is a perfect number");
 
 
 
     
 
-    // If the unit_test_test is true
-    if (unit_test_test)
+    // If the unitTest_test is true
+    if (unitTestTest)
       // We inform the audience that the unit test is a perfect number
-      { Console.WriteLine("\nUnit test " + unit_test + " is a Perfect Number."); }
+      { Console.WriteLine("\nUnit test " + unitTest + " is a Perfect Number."); }
 
     else
       // Else we inform the audience that the unit test is not a perfect number
-      { Console.WriteLine("\nUnit test " + unit_test + " is Not a Perfect Number."); }
+      { Console.WriteLine("\nUnit test " + unitTest + " is Not a Perfect Number."); }
 
     
   }
